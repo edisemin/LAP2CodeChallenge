@@ -1,12 +1,16 @@
 const createPostElement = (data) => {
   const elem = document.createElement("div");
   const heading = document.createElement("h2");
+  const name = document.createElement("h3");
   const paragraph = document.createElement("p");
 
   heading.textContent = data["title"];
+  name.textContent = data["name"];
   paragraph.textContent = data["text"];
 
-  elem.append(heading, paragraph);
+  elem.append(heading);
+  elem.append(name);
+  elem.append(paragraph);
 
   return elem;
 };
@@ -52,7 +56,8 @@ document.querySelector("#post-form").addEventListener("submit", (e) => {
 
   createPost({
     title: form.get("title"),
-    text: form.get("text"),
+    name: form.get("name"),
+    text: form.get("text")
   });
 
   e.target.reset();
