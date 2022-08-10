@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   api:
     image: node:12.18.4
@@ -10,7 +10,5 @@ services:
 
   db:
     image: postgres:12.4
-    environment: 
-      - POSTGRES_USER=futureproof
     volumes:
       - "./db/migrations:/docker-entrypoint-initdb.d/:ro"
