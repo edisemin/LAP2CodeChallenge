@@ -21,21 +21,6 @@ class Post {
     });
   }
 
-  static getOneById(id) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        let postData = await db.query(`SELECT * FROM post WHERE id = $1;`, [
-          id,
-        ]);
-        let post = new Post(postData.rows[0]);
-        resolve(post);
-      } catch (err) {
-        console.log(err);
-        reject("Unable to locate post.");
-      }
-    });
-  }
-
   static create(data) {
     return new Promise(async (resolve, reject) => {
       try {
@@ -48,21 +33,6 @@ class Post {
       } catch (err) {
         console.log(err);
         reject("Unable to create post.");
-      }
-    });
-  }
-
-  static delete(id) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        let postData = await db.query(
-          `DELETE FROM post WHERE id = $1 RETURNING id;`,
-          [id]
-        );
-        resolve(postData.rows[0]);
-      } catch (err) {
-        console.log(err);
-        reject("Unable to delete post.");
       }
     });
   }

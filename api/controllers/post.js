@@ -30,23 +30,7 @@ async function create(req, res) {
   }
 }
 
-async function show(req, res) {
-  try {
-    const data = await Post.getOneById(req.params.id);
-    res.json({
-      success: true,
-      post: data,
-    });
-  } catch (err) {
-    res.status(500).json({
-      success: false,
-      error: err,
-    });
-  }
-}
-
 module.exports = {
   index,
   create,
-  show,
 };

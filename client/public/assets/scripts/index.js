@@ -16,7 +16,7 @@ const createPostElement = (data) => {
 };
 
 const loadPosts = () => {
-  const container = document.querySelector("container");
+  const container = document.querySelector("#post-form");
 
   fetch("http://localhost:3000/posts")
     .then((res) => res.json())
@@ -57,7 +57,7 @@ document.querySelector("#post-form").addEventListener("submit", (e) => {
   createPost({
     title: form.get("title"),
     name: form.get("name"),
-    text: form.get("text")
+    text: form.get("text"),
   });
 
   e.target.reset();
