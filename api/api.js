@@ -13,5 +13,8 @@ api.use(express.json());
 // Setup routes
 
 api.use("/posts", postRouter);
+api.use("/", (req, res) => {
+  res.status(200).send("Welcome to our Telegraph API");
+});
 
 module.exports = api;
