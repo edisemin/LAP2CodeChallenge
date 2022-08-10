@@ -1,3 +1,6 @@
+* {
+  font-size: 50px;
+}
 form {
   text-align: center;
   margin-right: 30%;
@@ -12,4 +15,24 @@ form {
 
 fieldset {
   border: none;
+}
+
+#title {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+#name {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
 }
