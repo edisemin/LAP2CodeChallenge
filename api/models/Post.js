@@ -1,4 +1,4 @@
-const db = require("../database/connect");
+const db = require("../dbConfig/init");
 
 class Post {
   constructor(data) {
@@ -12,7 +12,11 @@ class Post {
     return new Promise(async (resolve, reject) => {
       try {
         let postData = await db.query("SELECT * FROM post");
-        let posts = postData.rows.map((p) => new Post(p));
+        let posts = postData.rows.map((a) => ({
+          title: a.title,
+          name: a.name,
+          text: a.text,
+        }));
         resolve(posts);
       } catch (err) {
         console.log(err);

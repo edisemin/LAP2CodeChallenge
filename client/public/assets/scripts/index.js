@@ -1,7 +1,7 @@
 const createPostElement = (data) => {
   const elem = document.createElement("div");
   const heading = document.createElement("h2");
-  const name = document.createElement("h3");
+  const name = document.createElement("h4");
   const paragraph = document.createElement("p");
 
   heading.textContent = data["title"];
@@ -16,7 +16,7 @@ const createPostElement = (data) => {
 };
 
 const loadPosts = () => {
-  const container = document.querySelector("#post-form");
+  const container = document.querySelector("container");
 
   fetch("http://localhost:3000/posts")
     .then((res) => res.json())
