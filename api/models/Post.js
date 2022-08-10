@@ -4,6 +4,7 @@ class Post {
   constructor(data) {
     this.id = data.id;
     this.title = data.title;
+    this.name = data.name;
     this.text = data.text;
   }
 
@@ -39,8 +40,8 @@ class Post {
     return new Promise(async (resolve, reject) => {
       try {
         let postData = await db.query(
-          `INSERT INTO post (title, text) VALUES ($1, $2) RETURNING *;`,
-          [data.title, data.text]
+          `INSERT INTO post (title, name, text) VALUES ($1, $2, $3) RETURNING *;`,
+          [data.title, data.name, data.text]
         );
         let post = new Post(postData.rows[0]);
         resolve(post);
