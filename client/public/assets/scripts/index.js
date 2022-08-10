@@ -43,6 +43,7 @@ function createPost(data) {
       document
         .querySelector("container")
         .appendChild(createPostElement(data["post"]));
+      // window.location.replace("/posts/");
     })
     .catch((err) => alert(err));
 }
