@@ -1,0 +1,49 @@
+* {
+  font-size: 20px;
+}
+
+form {
+  text-align: center;
+  margin-right: 30%;
+  margin-top: 50px;
+}
+
+.button {
+  position: absolute;
+  top: 5%;
+  right: 30%;
+}
+
+fieldset {
+  border: none;
+}
+
+#title {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+#name {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+container {
+  text-align: center;
+}
+div {
+  border: 3px solid black;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+}

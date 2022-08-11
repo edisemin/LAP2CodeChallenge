@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegraph</title>
+    <script src="./assets/scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+  </head>
+  <body>
+    <main>
+      <form id="post-form">
+        <fieldset>
+          <input
+            type="text"
+            required
+            id="title"
+            name="title"
+            placeholder="Title"
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            type="text"
+            required
+            id="name"
+            name="name"
+            placeholder="Name"
+          />
+        </fieldset>
+        <fieldset>
+          <textarea
+            required
+            id="text"
+            name="text"
+            placeholder="Your story..."
+          ></textarea>
+        </fieldset>
+        <input class="button" type="submit" value="Publish" />
+      </form>
+
+      <container> </container>
+    </main>
+  </body>
+</html>
